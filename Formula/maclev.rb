@@ -1,8 +1,8 @@
 class Maclev < Formula
   desc "Any-window floating utility for macOS"
   homepage "https://github.com/Aureuma/maclev"
-  url "https://github.com/Aureuma/maclev/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "76785338eda72f6697cb71414e07408739672d13f3333d3f6ebca831572bb0ef"
+  url "https://github.com/Aureuma/maclev/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "863f4aba6ea551219844e5975d68bbad2f42c8dfd1edce2bf71e3a7e3cb0035b"
   license "MIT"
   head "https://github.com/Aureuma/maclev.git", branch: "main"
 
