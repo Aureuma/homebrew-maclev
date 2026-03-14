@@ -1,6 +1,6 @@
 cask "maclev" do
-  version "0.4.15"
-  sha256 "64af6eedb7414a9335b6177fc012353554081c0095de03f89af990276f60bd18"
+  version "0.4.16"
+  sha256 "d0a34fa9f31486de98cd2bdfd0a354459602324596d9efccf9f8ce8604dd4731"
 
   url "https://raw.githubusercontent.com/Aureuma/homebrew-maclev/main/artifacts/maclev-#{version}.zip"
   name "MacLev"
