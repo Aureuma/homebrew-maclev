@@ -1,8 +1,8 @@
 class Maclev < Formula
   desc "Lightweight floating browser for macOS"
   homepage "https://github.com/Aureuma/maclev"
-  url "https://github.com/Aureuma/maclev/archive/refs/tags/v0.2.1.tar.gz"
-  sha256 "8e404cfca330548eeface334a8c762634a23f186b8bcdbe0871975bb812048e3"
+  url "https://github.com/Aureuma/maclev/archive/refs/tags/v0.2.2.tar.gz"
+  sha256 "70724aa4704596360543dea6d28df9700ddcecd09164af1ac77d487b02be0882"
   license "MIT"
   head "https://github.com/Aureuma/maclev.git", branch: "main"
 
@@ -10,8 +10,19 @@ class Maclev < Formula
 
   def install
     ENV["SWIFTPM_DISABLE_SANDBOX"] = "1"
-    system "swift", "build", "--disable-sandbox", "-c", "release"
-    bin.install ".build/release/maclev"
+    system "env", "OPEN_APP=0", "./build_app.sh"
+    bin.install "build/maclev.app/Contents/MacOS/maclev"
+    prefix.install "build/maclev.app"
+  end
+
+  def caveats
+    <<~EOS
+      The app bundle is installed at:
+        #{opt_prefix}/maclev.app
+
+      Launch it with:
+        open #{opt_prefix}/maclev.app
+    EOS
   end
 
   test do
