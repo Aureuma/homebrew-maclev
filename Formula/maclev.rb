@@ -11,7 +11,6 @@ class Maclev < Formula
   def install
     ENV["SWIFTPM_DISABLE_SANDBOX"] = "1"
     system "env", "OPEN_APP=0", "./build_app.sh"
-    bin.install "build/maclev.app/Contents/MacOS/maclev"
     prefix.install "build/maclev.app"
   end
 
@@ -26,6 +25,6 @@ class Maclev < Formula
   end
 
   test do
-    assert_predicate bin/"maclev", :exist?
+    assert_predicate prefix/"maclev.app", :exist?
   end
 end
