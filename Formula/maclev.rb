@@ -1,8 +1,8 @@
 class Maclev < Formula
   desc "Lightweight floating browser for macOS"
   homepage "https://github.com/Aureuma/maclev"
-  url "https://github.com/Aureuma/maclev/archive/refs/tags/v0.3.2.tar.gz"
-  sha256 "131cdc9fd82002ffbfae15d76f35b61bf168150d5f6f4b6121fea40ec3ffe7bd"
+  url "https://github.com/Aureuma/maclev/archive/refs/tags/v0.3.3.tar.gz"
+  sha256 "2cb5cf7b921f0880a477c37bacc1a29920a90efc1a3209c9452d7e457aa65186"
   license "MIT"
   head "https://github.com/Aureuma/maclev.git", branch: "main"
 
